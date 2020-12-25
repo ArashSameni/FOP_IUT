@@ -28,3 +28,23 @@ void reverse(char* str){
         *p2 = p;
     }
 }
+
+char* strlwr(char* str){
+    char* ptr = str;
+    while(*ptr){
+        if(*ptr >= 'A' && *ptr <= 'Z')
+            *ptr += 32;
+        ptr++;
+    }
+    return str;
+}
+
+char* strupr(char* str){
+    char* ptr = str;
+    while(*ptr){
+        if(*ptr >= 'a' && *ptr <= 'z')
+            *ptr -= 32;
+        ptr++;
+    }
+    return str;
+}
