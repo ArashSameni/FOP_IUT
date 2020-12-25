@@ -48,3 +48,19 @@ char* strupr(char* str){
     }
     return str;
 }
+
+double power(double number, int pow){
+    double ans = 1;
+    for (int i = 0; i < pow;ans *= number,i++);
+}
+
+int xToDec(long int mabnaNum, int mabna){
+    int res = 0;
+    int tavan = 0;
+    while(mabnaNum > 0){
+        res += (mabnaNum%10) * (int)power(mabna, tavan);
+        mabnaNum /= 10;
+        tavan++;
+    }
+    return res;
+}
