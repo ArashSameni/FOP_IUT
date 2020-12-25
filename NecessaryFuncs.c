@@ -18,3 +18,13 @@ void bubbleSort(int* arr, int count){
             }
     }
 }
+
+void reverse(char* str){
+    char *p1, *p2;
+    for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
+    {
+        char p = *p1;
+        *p1 = *p2;
+        *p2 = p;
+    }
+}
